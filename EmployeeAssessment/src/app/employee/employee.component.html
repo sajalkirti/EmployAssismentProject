@@ -1,13 +1,13 @@
 <p>employee works!</p>
 <div id="empList">
     <ul>
-        <div *ngFor="let employee of Employees; let i =index; trackBy:trackByEmployeeId">
+        <div *ngFor="let employee of Employees; let i =index; trackBy:trackByEmployeeId" [ngStyle]="{'border':'solid black 2px'}">
             <li>
-                <ul> Emp Id: {{employee.EmpId}}</ul>
-                <ul> Emp Name: {{employee.EmpName}}</ul>
-                <ul> Emp phone: {{employee.EmpPhone}}</ul>
-                <ul> Emp Address:{{employee.EmpAddress}}</ul>
-                <ul> Emp Gender: {{employee.EmpGender}}</ul>
+                <ul [ngClass]="'innerBorder'"> Emp Id: {{employee.EmpId}}</ul>
+                <ul [ngClass]="'innerBorder'" > Emp Name: {{employee.EmpName}}</ul>
+                <ul [ngClass]="'innerBorder'"> Emp phone: {{employee.EmpPhone}}</ul>
+                <ul [ngClass]="'innerBorder'"> Emp Address:{{employee.EmpAddress}}</ul>
+                <ul [ngClass]="'innerBorder'"> Emp Gender: {{employee.EmpGender}}</ul>
             </li>
         </div>
     </ul>

@@ -1,0 +1,7 @@
+.innerBorder{
+    border: solid greenyellow 1px;
+}
+
+.outerBorder{
+    border:solid black 2px;
+}
