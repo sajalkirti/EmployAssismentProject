@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
 import {CompanyModule} from './company/company.module'
-import {MyServiceService} from './my-service.service'
+import {MyServiceService} from './my-service.service';
+import { FilterAgeGroupPipe } from './filter-age-group.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    FilterAgeGroupPipe
   ],
   imports: [
     BrowserModule,

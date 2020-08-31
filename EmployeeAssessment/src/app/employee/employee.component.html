@@ -1,4 +1,4 @@
-<p>employee works!</p>
+<p><span [innerHtml]="heading"></span></p>
 <div id="empList">
     <ul>
         <div *ngFor="let employee of Employees; let i =index; trackBy:trackByEmployeeId" [ngStyle]="{'border':'solid black 2px'}">
@@ -8,8 +8,30 @@
                 <ul [ngClass]="'innerBorder'"> Emp phone: {{employee.EmpPhone}}</ul>
                 <ul [ngClass]="'innerBorder'"> Emp Address:{{employee.EmpAddress}}</ul>
                 <ul [ngClass]="'innerBorder'"> Emp Gender: {{employee.EmpGender}}</ul>
+                <ul [ngClass]="'innerBorder'"> Emp Gender: {{employee.DOB| date:"dd/MM/yyyy"}}</ul>
+                <ul [ngClass]="'innerBorder'"> Emp Gender: {{employee.Age|filterAgeGroup:employee.Age }}  {{employee.Age}}</ul>
             </li>
         </div>
     </ul>
 </div>
 <button (click)="submitUpdate()">Refresh</button>
+{{Employees|json}}
+<br/>
+<table>
+    <tr [ngStyle]="{'border':'solid black 2px'}">
+        <td [attr.colspan]="tableCol" [ngStyle]="{'border':'solid black 2px'}">
+            ram
+        </td>
+        <td [attr.colspan]="tableCol" [ngStyle]="{'border':'solid black 2px'}">
+            sita
+        </td>
+    </tr>
+    <tr>
+        <td [attr.colspan]="tableCol" [ngStyle]="{'border':'solid black 2px'}">
+            Krishna
+        </td>
+        <td [attr.colspan]="tableCol" [ngStyle]="{'border':'solid black 2px'}">
+            Radha
+        </td>
+    </tr>
+</table>
