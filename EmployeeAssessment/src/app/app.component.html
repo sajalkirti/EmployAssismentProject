@@ -30,4 +30,19 @@
   </div>
 
 </div>
-<app-employee></app-employee>
+<!-- <app-employee></app-employee>
+
+<app-employeelogin> </app-employeelogin> -->
+<div>Rouer Link Directive</div>
+<a [routerLink]="['/Employee']">student</a>    
+<a [routerLink]="['/EmployeeloginComponent']">EmployeeloginComponent</a>
+<br/>
+<button (click)="GetEmployee()" class="btn btn-primary">
+  Show Employee Details
+</button>  
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+
